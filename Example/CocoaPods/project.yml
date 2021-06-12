@@ -6,6 +6,6 @@ targets:
     type: application
     platform: iOS
     deploymentTarget: "10.0"
-    sources: [Example]
+    sources: [../Example]
     info:
-      path: Example/Info.plist
+      path: Info.plist

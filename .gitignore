@@ -1,5 +1,5 @@
 Source/Info.plist
-Example/Pods
-Example/Example.xcodeproj
-Example/Example.xcworkspace
-Example/Example/Info.plist
+Example/CocoaPods/Pods
+Example/CocoaPods/Example.xcodeproj
+Example/CocoaPods/Example.xcworkspace
+Example/CocoaPods/Info.plist
