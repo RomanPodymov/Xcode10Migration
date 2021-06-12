@@ -1,0 +1,21 @@
+language: swift
+osx_image: xcode9.4
+podfile: Example/Podfile
+install:
+  - bundle install
+  - git clone https://github.com/yonaskolb/Mint.git $TRAVIS_REPO_SLUG
+  - cd $TRAVIS_REPO_SLUG
+  - git checkout tags/0.11.3
+  - make
+
+env:
+  - XCODEGEN_VERSION="1.11.2"
+  - XCODEGEN_VERSION="1.11.1"
+
+script:
+  - cd $TRAVIS_BUILD_DIR
+  - cd Example
+  - mint run yonaskolb/XcodeGen@$XCODEGEN_VERSION
+  - bundle exec pod install
+  - cd $TRAVIS_BUILD_DIR
+  - xcodebuild clean build -sdk iphonesimulator -workspace Example/Example.xcworkspace -scheme Example CODE_SIGNING_REQUIRED=NO

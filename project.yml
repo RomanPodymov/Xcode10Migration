@@ -1,0 +1,12 @@
+name: Xcode9to10Preparation
+options:
+  bundleIdPrefix: com.romanpodymov.Xcode9to10Preparation2
+targets:
+  Xcode9to10Preparation:
+    type: framework
+    platform: iOS
+    deploymentTarget: "10.0"
+    sources: [Source]
+    info:
+      path: Source/Info.plist
+

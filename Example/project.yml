@@ -1,0 +1,11 @@
+name: Example
+options:
+  bundleIdPrefix: com.myapp
+targets:
+  Example:
+    type: application
+    platform: iOS
+    deploymentTarget: "10.0"
+    sources: [Example]
+    info:
+      path: Example/Info.plist

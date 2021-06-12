@@ -1,0 +1,7 @@
+lane :update_pod do
+    nextVersion = version_bump_podspec(path: "./Xcode9to10Preparation.podspec", bump_type: "patch")
+    git_commit(path: ["./Xcode9to10Preparation.podspec"], message: "New pod version " + nextVersion)
+    add_git_tag(tag: nextVersion)
+    push_to_git_remote(remote: "origin", local_branch: "master", remote_branch: "master", force: true, force_with_lease: true, tags: true)
+    pod_push(path: "./Xcode9to10Preparation.podspec")
+end
