@@ -1,4 +1,7 @@
 Source/Info.plist
+Example/Carthage/Carthage
+Example/Carthage/Example.xcodeproj
+Example/Carthage/Info.plist
 Example/CocoaPods/Pods
 Example/CocoaPods/Example.xcodeproj
 Example/CocoaPods/Example.xcworkspace

@@ -1,0 +1,13 @@
+name: Example
+options:
+  bundleIdPrefix: com.myapp2
+targets:
+  Example:
+    type: application
+    platform: iOS
+    deploymentTarget: "10.0"
+    sources: [../Example]
+    info:
+      path: Info.plist
+    dependencies:
+      - carthage: Xcode9to10Preparation
