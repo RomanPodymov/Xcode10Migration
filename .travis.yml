@@ -10,13 +10,14 @@ install:
 
 script:
   - cd $TRAVIS_BUILD_DIR
-  - mint bootstrap
   - cd Example/CocoaPods
+  - mint bootstrap
   - mint run yonaskolb/XcodeGen
   - bundle exec pod install
   - xcodebuild clean build -sdk iphonesimulator -workspace Example.xcworkspace -scheme Example CODE_SIGNING_REQUIRED=NO
   - cd $TRAVIS_BUILD_DIR
   - cd Example/Carthage
+  - mint bootstrap
   - mint run carthage bootstrap
   - mint run yonaskolb/XcodeGen
   - xcodebuild clean build -sdk iphonesimulator -project Example.xcodeproj -scheme Example CODE_SIGNING_REQUIRED=NO
