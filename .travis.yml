@@ -18,6 +18,6 @@ script:
   - cd $TRAVIS_BUILD_DIR
   - cd Example/Carthage
   - mint bootstrap
-  - mint run carthage bootstrap
+  - mint run --executable carthage carthage bootstrap
   - mint run yonaskolb/XcodeGen
   - xcodebuild clean build -sdk iphonesimulator -project Example.xcodeproj -scheme Example CODE_SIGNING_REQUIRED=NO
