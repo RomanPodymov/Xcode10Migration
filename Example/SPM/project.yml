@@ -10,4 +10,7 @@ targets:
     info:
       path: Info.plist
     dependencies:
-      - carthage: Xcode9to10Preparation
+      - package: Xcode9to10Preparation
+packages:
+  Xcode9to10Preparation:
+    url: https://github.com/RomanPodymov/Xcode9to10Preparation
